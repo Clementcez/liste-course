@@ -9,7 +9,7 @@
       <w>210</w>
       <h>190</h>
     </coordinates>
-    <panel_attributes>List
+    <panel_attributes>ShoppingList
 
 --
 -id: Int
@@ -71,8 +71,8 @@ m2=1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>410</x>
-      <y>580</y>
+      <x>320</x>
+      <y>650</y>
       <w>210</w>
       <h>190</h>
     </coordinates>
@@ -91,7 +91,7 @@ m2=1
       <w>210</w>
       <h>190</h>
     </coordinates>
-    <panel_attributes>ListItem
+    <panel_attributes>ShoppingListItem
 --
 -id: Int
 -productId: Int
@@ -125,5 +125,22 @@ m2=1
     <panel_attributes>lt=&lt;-
 m1=1</panel_attributes>
     <additional_attributes>170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>360</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Store
+--
+-id: Int
+-wording: String
+-location: String
+-createdAt: dateTime
+-updatedAt: dateTime</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
