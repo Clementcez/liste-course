@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ShoppingListItem index{% endblock %}
+
+{% block body %}
+    <h1>ShoppingListItem index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Quantity</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for shopping_list_item in shopping_list_items %}
+            <tr>
+                <td>{{ shopping_list_item.id }}</td>
+                <td>{{ shopping_list_item.quantity }}</td>
+                <td>
+                    <a href="{{ path('app_admin_shopping_list_shopping_list_item_show', {'id': shopping_list_item.id}) }}">show</a>
+                    <a href="{{ path('app_admin_shopping_list_shopping_list_item_edit', {'id': shopping_list_item.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_admin_shopping_list_shopping_list_item_new') }}">Create new</a>
+{% endblock %}

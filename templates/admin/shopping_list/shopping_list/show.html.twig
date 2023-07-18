@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ShoppingList{% endblock %}
+
+{% block body %}
+    <h1>ShoppingList</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ shopping_list.id }}</td>
+            </tr>
+            <tr>
+                <th>Wording</th>
+                <td>{{ shopping_list.wording }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ shopping_list.description }}</td>
+            </tr>
+            <tr>
+                <th>CreatedAt</th>
+                <td>{{ shopping_list.createdAt ? shopping_list.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>UpdatedAt</th>
+                <td>{{ shopping_list.updatedAt ? shopping_list.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_admin_shopping_list_shopping_list_index') }}">back to list</a>
+
+    <a href="{{ path('app_admin_shopping_list_shopping_list_edit', {'id': shopping_list.id}) }}">edit</a>
+
+    {{ include('admin/shopping_list/shopping_list/_delete_form.html.twig') }}
+{% endblock %}

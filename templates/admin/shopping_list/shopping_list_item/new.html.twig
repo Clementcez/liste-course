@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ShoppingListItem{% endblock %}
+
+{% block body %}
+    <h1>Create new ShoppingListItem</h1>
+
+    {{ include('admin/shopping_list/shopping_list_item/_form.html.twig') }}
+
+    <a href="{{ path('app_admin_shopping_list_shopping_list_item_index') }}">back to list</a>
+{% endblock %}
