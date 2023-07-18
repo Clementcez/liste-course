@@ -19,3 +19,4 @@ $(document).ready(function() {
 
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.scss';
+import './images/liste-course.jpg'

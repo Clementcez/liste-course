@@ -1,6 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+
+    <div class="my-2">
+        <h1>Mes listes de course !</h1>
+        <img class="img-fluid w-50" src="{{ asset('build/images/liste-course.jpg') }}" alt="">
+    </div>
+
     {% if error %}
         <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
@@ -15,6 +21,6 @@
         {# If you want to control the URL the user is redirected to on success
         <input type="hidden" name="_target_path" value="/account"> #}
 
-        <button type="submit">login</button>
+        <button class="btn btn-primary" type="submit">login</button>
     </form>
 {% endblock %}
