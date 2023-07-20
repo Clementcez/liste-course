@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Client;
 
 use App\Repository\Admin\ShoppingList\ShoppingListRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

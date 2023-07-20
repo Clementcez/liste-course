@@ -14,7 +14,6 @@ class ShoppingListItemType extends AbstractType
         $builder
             ->add('quantity')
             ->add('product')
-            ->add('shoppingList')
         ;
     }
 

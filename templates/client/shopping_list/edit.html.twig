@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit shopping list{% endblock %}
+
+{% block body %}
+    <div class="d-flex justify-content-between my-5">
+        <h1>Editer {{ shopping_list.wording }}</h1>
+        <a href="{{ path('app_index') }}" class="btn btn-warning"><i class="fas fa-arrow-left"></i> retourner à la liste</a>
+    </div>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <button class="btn btn-success"><i class="fas fa-pen"></i> Save</button>
+    {{ form_end(form) }}
+
+{% endblock %}
