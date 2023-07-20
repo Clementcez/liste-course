@@ -7,6 +7,7 @@ use App\Repository\Admin\ShoppingList\ShoppingListItemRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ShoppingListItemRepository::class)]
+#[ORM\HasLifecycleCallbacks]
 class ShoppingListItem
 {
     #[ORM\Id]
