@@ -22,26 +22,6 @@ class ShoppingListController extends AbstractController
         ]);
     }
 
-    #[Route('/new', name: 'app_admin_shopping_list_shopping_list_new', methods: ['GET', 'POST'])]
-    public function new(Request $request, EntityManagerInterface $entityManager): Response
-    {
-        $shoppingList = new ShoppingList();
-        $form = $this->createForm(ShoppingListType::class, $shoppingList);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager->persist($shoppingList);
-            $entityManager->flush();
-
-            return $this->redirectToRoute('app_admin_shopping_list_shopping_list_index', [], Response::HTTP_SEE_OTHER);
-        }
-
-        return $this->render('admin/shopping_list/shopping_list/new.html.twig', [
-            'shopping_list' => $shoppingList,
-            'form' => $form,
-        ]);
-    }
-
     #[Route('/{id}', name: 'app_admin_shopping_list_shopping_list_show', methods: ['GET'])]
     public function show(ShoppingList $shoppingList): Response
     {

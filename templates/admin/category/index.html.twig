@@ -19,8 +19,8 @@
                 <td>{{ category.id }}</td>
                 <td>{{ category.wording }}</td>
                 <td>
-                    <a href="{{ path('app_admin_category_show', {'id': category.id}) }}">show</a>
-                    <a href="{{ path('app_admin_category_edit', {'id': category.id}) }}">edit</a>
+                    <a href="{{ path('app_admin_category_show', {'id': category.id}) }}" class="btn btn-info"><i class="fas fa-eye"></i> show</a>
+                    <a href="{{ path('app_admin_category_edit', {'id': category.id}) }}" class="btn btn-primary"><i class="fas fa-pen"></i> Edit</a>
                 </td>
             </tr>
         {% else %}

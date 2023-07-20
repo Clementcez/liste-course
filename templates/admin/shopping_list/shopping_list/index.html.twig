@@ -27,8 +27,8 @@
                 <td>{{ shopping_list.createdAt ? shopping_list.createdAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ shopping_list.updatedAt ? shopping_list.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
-                    <a href="{{ path('app_admin_shopping_list_shopping_list_show', {'id': shopping_list.id}) }}">show</a>
-                    <a href="{{ path('app_admin_shopping_list_shopping_list_edit', {'id': shopping_list.id}) }}">edit</a>
+                    <a href="{{ path('app_admin_shopping_list_shopping_list_show', {'id': shopping_list.id}) }}" class="btn btn-info"><i class="fas fa-eye"></i> show</a>
+                    <a href="{{ path('app_admin_shopping_list_shopping_list_edit', {'id': shopping_list.id}) }}" class="btn btn-primary"><i class="fas fa-pen"></i> Edit</a>
                 </td>
             </tr>
         {% else %}
@@ -38,6 +38,4 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('app_admin_shopping_list_shopping_list_new') }}">Create new</a>
 {% endblock %}

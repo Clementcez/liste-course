@@ -25,8 +25,8 @@
                 <td>{{ store.createdAt ? store.createdAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ store.updatedAt ? store.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
-                    <a href="{{ path('app_admin_store_show', {'id': store.id}) }}">show</a>
-                    <a href="{{ path('app_admin_store_edit', {'id': store.id}) }}">edit</a>
+                    <a href="{{ path('app_admin_store_show', {'id': store.id}) }}" class="btn btn-info"><i class="fas fa-eye"></i> show</a>
+                    <a href="{{ path('app_admin_store_edit', {'id': store.id}) }}" class="btn btn-primary"><i class="fas fa-pen"></i> Edit</a>
                 </td>
             </tr>
         {% else %}
@@ -37,5 +37,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_admin_store_new') }}">Create new</a>
+    <a href="{{ path('app_admin_store_new') }}" class="btn btn-primary"><i class="fas fa-plus"></i> Create new</a>
 {% endblock %}

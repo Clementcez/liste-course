@@ -14,8 +14,6 @@ class StoreType extends AbstractType
         $builder
             ->add('wording')
             ->add('location')
-            ->add('createdAt')
-            ->add('updatedAt')
         ;
     }
 

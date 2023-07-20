@@ -31,6 +31,11 @@ class ShoppingListItem
         return $this->id;
     }
 
+    public function __toString()
+    {
+        return $this->product . ' X' . $this->quantity;
+    }
+
     public function getProduct(): ?Product
     {
         return $this->product;

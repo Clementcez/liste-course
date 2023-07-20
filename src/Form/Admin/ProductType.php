@@ -13,8 +13,6 @@ class ProductType extends AbstractType
     {
         $builder
             ->add('wording')
-            ->add('createdAt')
-            ->add('updatedAt')
             ->add('category')
         ;
     }

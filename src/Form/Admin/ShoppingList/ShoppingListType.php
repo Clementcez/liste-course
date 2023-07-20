@@ -4,6 +4,7 @@ namespace App\Form\Admin\ShoppingList;
 
 use App\Entity\Admin\ShoppingList\ShoppingList;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -14,8 +15,6 @@ class ShoppingListType extends AbstractType
         $builder
             ->add('wording')
             ->add('description')
-            ->add('createdAt')
-            ->add('updatedAt')
             ->add('store')
         ;
     }
