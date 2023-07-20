@@ -31,6 +31,12 @@ installation du projet:
 
 - creer un fichier .env.local ajouter la ligne DATABASE_URL="mysql://##:##@127.0.0.1:3306/liste-course"
 
+- composer install
+
+- npm install
+
+- npm run build
+
 - php bin/console doctrine:database:create
 
 - php bin/console make:migration
