@@ -13,10 +13,34 @@ require('bootstrap');
 // require('bootstrap/js/dist/tooltip');
 // require('bootstrap/js/dist/popover');
 
-$(document).ready(function() {
-    $('[data-toggle="popover"]').popover();
-});
+// $(document).ready(function() {
+//     $('[data-toggle="popover"]').popover();
+// });
 
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.scss';
-import './images/liste-course.jpg'
+import './images/liste-course.jpg';
+
+import DataTable from 'datatables.net-bs5';
+
+const tableShoppingList = document.getElementById('shoppingList_list');
+const tableProduct = document.getElementById('product_list');
+const tableCategory = document.getElementById('category_list');
+const tableStore = document.getElementById('store_list');
+
+if(tableShoppingList){
+    new DataTable(tableShoppingList);
+}
+
+if(tableProduct){
+    new DataTable(tableProduct);
+}
+
+if(tableCategory){
+    new DataTable(tableCategory);
+}
+
+if(tableStore){
+    new DataTable(tableStore);
+}
+

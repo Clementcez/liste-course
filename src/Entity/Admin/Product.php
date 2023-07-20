@@ -2,10 +2,13 @@
 
 namespace App\Entity\Admin;
 
+use App\Entity\Admin\ShoppingList\ShoppingListItem;
 use App\Repository\Admin\ProductRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Knp\DoctrineBehaviors\Contract\Entity\TimestampableInterface;
 use Knp\DoctrineBehaviors\Model\Timestampable\TimestampableTrait;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 
 #[ORM\Entity(repositoryClass: ProductRepository::class)]
 class Product implements TimestampableInterface
@@ -21,8 +24,16 @@ class Product implements TimestampableInterface
     private ?string $wording = null;
 
     #[ORM\ManyToOne(inversedBy: 'products')]
-    #[ORM\JoinColumn(nullable: false)]
+    #[ORM\JoinColumn(nullable: true, onDelete: 'SET NULL')]
     private ?Category $category = null;
+
+    #[ORM\OneToMany(mappedBy: 'product', targetEntity: ShoppingListItem::class, orphanRemoval: true)]
+    private Collection $shoppingListItems;
+
+    public function __construct()
+    {
+        $this->shoppingListItems = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -54,6 +65,36 @@ class Product implements TimestampableInterface
     public function setCategory(?Category $category): static
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, ShoppingListItem>
+     */
+    public function getShoppingListItems(): Collection
+    {
+        return $this->shoppingListItems;
+    }
+
+    public function addShoppingListItem(ShoppingListItem $shoppingListItem): static
+    {
+        if (!$this->shoppingListItems->contains($shoppingListItem)) {
+            $this->shoppingListItems->add($shoppingListItem);
+            $shoppingListItem->setProduct($this);
+        }
+
+        return $this;
+    }
+
+    public function removeShoppingListItem(ShoppingListItem $shoppingListItem): static
+    {
+        if ($this->shoppingListItems->removeElement($shoppingListItem)) {
+            // set the owning side to null (unless already changed)
+            if ($shoppingListItem->getProduct() === $this) {
+                $shoppingListItem->setProduct(null);
+            }
+        }
 
         return $this;
     }

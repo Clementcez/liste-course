@@ -22,7 +22,7 @@ class Category implements TimestampableInterface
     #[ORM\Column(length: 255, unique: true)]
     private ?string $wording = null;
 
-    #[ORM\OneToMany(mappedBy: 'category', targetEntity: Product::class, orphanRemoval: true)]
+    #[ORM\OneToMany(mappedBy: 'category', targetEntity: Product::class, orphanRemoval: false)]
     private Collection $products;
 
     public function __construct()

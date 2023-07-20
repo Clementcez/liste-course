@@ -27,6 +27,14 @@
                 <th>UpdatedAt</th>
                 <td>{{ shopping_list.updatedAt ? shopping_list.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
+            <tr>
+                <th>ShoppingListItem</th>
+                <td>
+                    {% for item in shopping_list.shoppingListItems %}
+                        <p>{{ item }}</p>
+                    {% endfor %}
+                </td>
+            </tr>
         </tbody>
     </table>
 

@@ -28,6 +28,7 @@ class ShoppingList implements TimestampableInterface
     private ?string $description = null;
 
     #[ORM\ManyToOne(inversedBy: 'shoppingLists')]
+    #[ORM\JoinColumn(onDelete: 'SET NULL')]
     private ?Store $store = null;
 
     #[ORM\OneToMany(mappedBy: 'shoppingList', targetEntity: ShoppingListItem::class, orphanRemoval: true)]
