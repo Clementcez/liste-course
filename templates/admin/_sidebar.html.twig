@@ -1,0 +1,10 @@
+{% if app.user %}
+    <div class="d-flex flex-column m-3">
+        <a href="{{ path('app_admin_shopping_list_shopping_list_index') }}" class="btn btn-primary m-2">Listes</a>
+        <a href="{{ path('app_admin_product_index') }}" class="btn btn-primary m-2">Produits</a>
+        <a href="{{ path('app_admin_category_index') }}" class="btn btn-primary m-2">Catégories</a>
+        <a href="{{ path('app_admin_store_index') }}" class="btn btn-primary m-2">Magasins</a>
+        <a href="{{ path('app_user_index') }}" class="btn btn-primary m-2">Utilisateurs</a>
+        <a class="btn btn-danger m-2" href="{{ path('app_logout') }}"><i class="fa-solid fa-link-slash"></i> Déconnexion</a>
+    </div>
+{% endif %}

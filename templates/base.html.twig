@@ -14,12 +14,12 @@
         {% endblock %}
     </head>
     <body>
-        <section class="container my-5">
-            {% if app.user %}
-                <a class="btn btn-danger" href="{{ path('app_logout') }}"><i class="fa-solid fa-link-slash"></i> Déconnexion</a>
-            {% endif %}
+        <section class="container d-flex flex-lg-row my-5 w-100">
+            {% include "admin/_sidebar.html.twig" %}
             
-            {% block body %}{% endblock %}
+            <div class="w-100">
+                {% block body %}{% endblock %}
+            </div>
         </section>
     </body>
 </html>
