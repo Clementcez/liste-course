@@ -29,6 +29,11 @@ class Product implements TimestampableInterface
         return $this->id;
     }
 
+    public function __toString()
+    {
+        return $this->wording;
+    }
+
     public function getWording(): ?string
     {
         return $this->wording;

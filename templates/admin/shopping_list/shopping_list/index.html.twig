@@ -10,6 +10,7 @@
             <tr>
                 <th>Id</th>
                 <th>Wording</th>
+                <th>Store</th>
                 <th>Description</th>
                 <th>CreatedAt</th>
                 <th>UpdatedAt</th>
@@ -21,6 +22,7 @@
             <tr>
                 <td>{{ shopping_list.id }}</td>
                 <td>{{ shopping_list.wording }}</td>
+                <td>{{ shopping_list.store }}</td>
                 <td>{{ shopping_list.description }}</td>
                 <td>{{ shopping_list.createdAt ? shopping_list.createdAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ shopping_list.updatedAt ? shopping_list.updatedAt|date('Y-m-d H:i:s') : '' }}</td>

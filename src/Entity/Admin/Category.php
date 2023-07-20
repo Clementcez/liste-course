@@ -30,6 +30,11 @@ class Category implements TimestampableInterface
         $this->products = new ArrayCollection();
     }
 
+    public function __toString()
+    {
+        return $this->wording;
+    }
+
     public function getId(): ?int
     {
         return $this->id;

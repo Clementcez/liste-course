@@ -38,6 +38,11 @@ class ShoppingList implements TimestampableInterface
         $this->shoppingListItems = new ArrayCollection();
     }
 
+    public function __toString()
+    {
+        return $this->wording;
+    }
+
     public function getId(): ?int
     {
         return $this->id;
