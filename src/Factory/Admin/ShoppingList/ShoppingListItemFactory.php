@@ -51,6 +51,7 @@ final class ShoppingListItemFactory extends ModelFactory
             'product' => ProductFactory::random(),
             'quantity' => self::faker()->numberBetween(1,9),
             'shoppingList' => ShoppingListFactory::random(),
+            'checked' => self::faker()->numberBetween(0,1)
         ];
     }
 

@@ -26,6 +26,9 @@ class ShoppingListItem
     #[ORM\JoinColumn(nullable: false)]
     private ?ShoppingList $shoppingList = null;
 
+    #[ORM\Column]
+    private ?bool $checked = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -68,6 +71,18 @@ class ShoppingListItem
     public function setShoppingList(?ShoppingList $shoppingList): static
     {
         $this->shoppingList = $shoppingList;
+
+        return $this;
+    }
+
+    public function isChecked(): ?bool
+    {
+        return $this->checked;
+    }
+
+    public function setChecked(bool $checked): static
+    {
+        $this->checked = $checked;
 
         return $this;
     }

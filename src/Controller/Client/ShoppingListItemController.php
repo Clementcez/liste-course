@@ -5,6 +5,7 @@ namespace App\Controller\Client;
 use App\Entity\Admin\ShoppingList\ShoppingListItem;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -58,5 +59,15 @@ class ShoppingListItemController extends AbstractController
         }
 
         return $this->redirectToRoute('app_index');
+    }
+
+    #[Route('/{id}/checked', name: 'app_shopping_list_item_checked', methods: ['GET'])]
+    public function check(ShoppingListItem $shoppingListItem)
+    {
+        $shoppingListItem->setChecked(!$shoppingListItem->isChecked());
+        $this->entityManager->persist($shoppingListItem);
+        $this->entityManager->flush();
+
+        return new JsonResponse('success', 200);
     }
 }

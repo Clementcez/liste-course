@@ -54,15 +54,15 @@
 						</p>
 						{% for shoppingListItem in shoppingList.shoppingListItems %}
 							<div class="d-flex">
-								<ol class="list-group my-1 cursor-pointer w-100">
-									<li class="list-group-item d-flex justify-content-between align-items-start">
+								<ol class="list-group my-1 cursor-pointer w-100" data-id="{{ shoppingListItem.id }}">
+									<li class="list-group-item d-flex justify-content-between align-items-start {% if shoppingListItem.checked %}text-black-50{% endif %}">
 										<div class="ms-2 me-auto">
 											<div class="fw-bold">
 												#
 												{{ loop.index }}
 												:
 												{{ shoppingListItem.product }}
-												<i class="fas fa-check text-success d-none"></i>
+												<i class="fas fa-check text-success {% if not shoppingListItem.checked %}d-none{% endif %}"></i>
 											</div>
 										</div>
 									</li>

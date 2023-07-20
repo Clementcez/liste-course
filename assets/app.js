@@ -55,13 +55,21 @@ if (accordionShoppingList) {
 
     for (let shoppingListItem of shoppingListItems) {
         shoppingListItem.addEventListener('click', function (event) {
-            const liItem = shoppingListItem.getElementsByTagName("li")[0];
-            liItem.classList.toggle('text-black-50');
 
-            const iconCheck = shoppingListItem.getElementsByTagName("i")[0];
-            iconCheck.classList.toggle('d-none')
+            const shoppingListItemId = shoppingListItem.dataset.id;
+
+            fetch('/shopping-list-item/' + shoppingListItemId + '/checked')
+                .then(response => response.json())
+                .then(json => {
+                    if ("success" === json) {
+                        const liItem = shoppingListItem.getElementsByTagName("li")[0];
+                        liItem.classList.toggle('text-black-50');
+            
+                        const iconCheck = shoppingListItem.getElementsByTagName("i")[0];
+                        iconCheck.classList.toggle('d-none')
+                    }
+                });
         })
-        
     }
 }
 

@@ -48,7 +48,7 @@ final class ProductFactory extends ModelFactory
     {
         return [
             'category' => CategoryFactory::random(),
-            'wording' => self::faker()->word(),
+            'wording' => self::faker()->unique()->word(),
         ];
     }
 
