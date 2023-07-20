@@ -53,42 +53,43 @@
 							{{ shoppingList.description }}
 						</p>
 						{% for shoppingListItem in shoppingList.shoppingListItems %}
-							<ol class="list-group my-1 cursor-pointer">
-								<li class="list-group-item d-flex justify-content-between align-items-start">
-									<div class="ms-2 me-auto">
-										<div class="fw-bold">
-											#
-											{{ loop.index }}
-											:
-											{{ shoppingListItem.product }}
-											<i class="fas fa-check text-success d-none"></i>
+							<div class="d-flex">
+								<ol class="list-group my-1 cursor-pointer w-100">
+									<li class="list-group-item d-flex justify-content-between align-items-start">
+										<div class="ms-2 me-auto">
+											<div class="fw-bold">
+												#
+												{{ loop.index }}
+												:
+												{{ shoppingListItem.product }}
+												<i class="fas fa-check text-success d-none"></i>
+											</div>
 										</div>
-									</div>
-
-									<div class="d-flex me-2">
-										<form method="post" action="{{ path('app_shopping_list_item_minus', {'id': shoppingListItem.id}) }}">
-											<input type="hidden" name="_token" value="{{ csrf_token('minus' ~ shoppingListItem.id) }}">
-											<button class="btn btn-warning">
-												<i class="fas fa-minus"></i>
-											</button>
-										</form>
-										<button class="btn btn-primary">{{ shoppingListItem.quantity }}</button>
-										<form method="post" action="{{ path('app_shopping_list_item_add', {'id': shoppingListItem.id}) }}">
-											<input type="hidden" name="_token" value="{{ csrf_token('add' ~ shoppingListItem.id) }}">
-											<button class="btn btn-success">
-												<i class="fas fa-plus"></i>
-											</button>
-										</form>
-									</div>
-
+									</li>
+								</ol>
+								<div class="d-flex p-2">
+									<form method="post" action="{{ path('app_shopping_list_item_minus', {'id': shoppingListItem.id}) }}">
+										<input type="hidden" name="_token" value="{{ csrf_token('minus' ~ shoppingListItem.id) }}">
+										<button class="btn btn-warning">
+											<i class="fas fa-minus"></i>
+										</button>
+									</form>
+									<div class="btn btn-primary">{{ shoppingListItem.quantity }}</div>
+									<form method="post" action="{{ path('app_shopping_list_item_add', {'id': shoppingListItem.id}) }}">
+										<input type="hidden" name="_token" value="{{ csrf_token('add' ~ shoppingListItem.id) }}">
+										<button class="btn btn-success me-2">
+											<i class="fas fa-plus"></i>
+										</button>
+									</form>
+									
 									<form method="post" action="{{ path('app_shopping_list_item_delete', {'id': shoppingListItem.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
 										<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ shoppingListItem.id) }}">
 										<button class="btn btn-danger">
 											<i class="fas fa-trash"></i>
 										</button>
 									</form>
-								</li>
-							</ol>
+								</div>
+							</div>
 						{% endfor %}
 
 						<a class="btn btn-primary my-2" href="{{ path('app_shopping_list_shopping_list_item_add', {'id': shoppingList.id }) }}"><i class="fas fa-plus"></i> Ajouter un produit</a>
