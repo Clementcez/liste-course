@@ -5,6 +5,7 @@ namespace App\Entity\Admin\ShoppingList;
 use App\Entity\Admin\Product;
 use App\Repository\Admin\ShoppingList\ShoppingListItemRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: ShoppingListItemRepository::class)]
 #[ORM\HasLifecycleCallbacks]
@@ -20,6 +21,7 @@ class ShoppingListItem
     private ?Product $product = null;
 
     #[ORM\Column]
+    #[Assert\Positive]
     private ?int $quantity = null;
 
     #[ORM\ManyToOne(inversedBy: 'shoppingListItems')]
