@@ -1,5 +1,6 @@
-{% if app.user %}
+{% if app.user and 'admin' in app.request.requestUri %}
     <div class="d-flex flex-column m-3">
+        <a href="{{ path('app_index') }}" class="btn btn-info m-2"><i class="fas fa-arrow-left"></i> Retour au site</a>
         <a href="{{ path('app_admin_shopping_list_shopping_list_index') }}" class="btn btn-primary m-2">Listes</a>
         <a href="{{ path('app_admin_product_index') }}" class="btn btn-primary m-2">Produits</a>
         <a href="{{ path('app_admin_category_index') }}" class="btn btn-primary m-2">Catégories</a>
@@ -7,4 +8,12 @@
         <a href="{{ path('app_user_index') }}" class="btn btn-primary m-2">Utilisateurs</a>
         <a class="btn btn-danger m-2" href="{{ path('app_logout') }}"><i class="fas fa-unlink"></i> Déconnexion</a>
     </div>
+{% elseif app.user %}
+    <div class="d-flex flex-column m-3">
+        <a class="btn btn-info m-2" href="{{ path('app_admin_shopping_list_shopping_list_index') }}"><i class="fas fa-arrow-left"></i> Aller sur l'admin</a>
+    </div>
+{% else %}
+      <div class="d-flex flex-column m-3">
+        <a class="btn btn-info m-2" href="{{ path('app_login') }}"><i class="fas fa-link"></i> Connexion</a>
+    </div>  
 {% endif %}

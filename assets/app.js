@@ -23,6 +23,8 @@ import './images/liste-course.jpg';
 
 import DataTable from 'datatables.net-bs5';
 
+/// trie + pagination index admin ///
+
 const tableShoppingList = document.getElementById('shoppingList_list');
 const tableProduct = document.getElementById('product_list');
 const tableCategory = document.getElementById('category_list');
@@ -42,5 +44,24 @@ if(tableCategory){
 
 if(tableStore){
     new DataTable(tableStore);
+}
+
+/// check list ///
+
+const accordionShoppingList = document.getElementById('accordionShoppingList');
+
+if (accordionShoppingList) {
+    const shoppingListItems = accordionShoppingList.getElementsByTagName("ol");
+
+    for (let shoppingListItem of shoppingListItems) {
+        shoppingListItem.addEventListener('click', function (event) {
+            const liItem = shoppingListItem.getElementsByTagName("li")[0];
+            liItem.classList.toggle('text-black-50');
+
+            const iconCheck = shoppingListItem.getElementsByTagName("i")[0];
+            iconCheck.classList.toggle('d-none')
+        })
+        
+    }
 }
 
