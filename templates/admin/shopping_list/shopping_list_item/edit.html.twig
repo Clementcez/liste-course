@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit ShoppingListItem{% endblock %}
+{% block title %}{{ "Edit ShoppingListItem"|trans }}{% endblock %}
 
 {% block body %}
-    <h1>Edit ShoppingListItem</h1>
+    <h1>{{ "Edit ShoppingListItem"|trans }}</h1>
 
     {{ include('admin/shopping_list/shopping_list_item/_form.html.twig', {'button_label': 'Update'}) }}
 {% endblock %}

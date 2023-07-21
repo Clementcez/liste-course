@@ -1,14 +1,14 @@
 {{ form_start(form) }}
     {{ form_widget(form) }}
-    <button class="btn btn-success"><i class="fas fa-pen"></i> {{ button_label|default('Save') }}</button>
+    <button class="btn btn-success"><i class="fas fa-pen"></i> {{ button_label|default('Save')|trans }}</button>
 {{ form_end(form) }}
 
     <table class="table">
         <thead>
             <tr>
-                <th>Product</th>
-                <th>Quantity</th>
-                <th>actions</th>
+                <th>{{ "Product"|trans }}</th>
+                <th>{{ "Quantity"|trans }}</th>
+                <th>{{ "actions"|trans }}</th>
             </tr>
         </thead>
         <tbody>
@@ -18,7 +18,7 @@
                 <td>X {{ item.quantity }}</td>
                 <td>
                     <a class="btn btn-primary" href="{{ path('app_admin_shopping_list_shopping_list_item_edit', {'id': item.id}) }}">
-                        <i class="fas fa-pen"></i> Edit
+                        <i class="fas fa-pen"></i> {{ "Edit"|trans }}
                     </a>
                     {% include "admin/shopping_list/shopping_list_item/_delete_form.html.twig" with {'shopping_list_item': item} %}
                 </td>

@@ -1,19 +1,19 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Store index{% endblock %}
+{% block title %}{{ "Store index"|trans }}{% endblock %}
 
 {% block body %}
-    <h1>Store index</h1>
+    <h1>{{ "Store index"|trans }}</h1>
 
     <table id="store_list" class="table table-striped">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Wording</th>
-                <th>Location</th>
-                <th>CreatedAt</th>
-                <th>UpdatedAt</th>
-                <th>actions</th>
+                <th>{{ "Id"|trans }}</th>
+                <th>{{ "Wording"|trans }}</th>
+                <th>{{ "Location"|trans }}</th>
+                <th>{{ "CreatedAt"|trans }}</th>
+                <th>{{ "UpdatedAt"|trans }}</th>
+                <th>{{ "actions"|trans }}</th>
             </tr>
         </thead>
         <tbody>
@@ -25,17 +25,17 @@
                 <td>{{ store.createdAt ? store.createdAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ store.updatedAt ? store.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
-                    <a href="{{ path('app_admin_store_show', {'id': store.id}) }}" class="btn btn-info"><i class="fas fa-eye"></i> show</a>
-                    <a href="{{ path('app_admin_store_edit', {'id': store.id}) }}" class="btn btn-primary"><i class="fas fa-pen"></i> Edit</a>
+                    <a href="{{ path('app_admin_store_show', {'id': store.id}) }}" class="btn btn-info"><i class="fas fa-eye"></i> {{ "show"|trans }}</a>
+                    <a href="{{ path('app_admin_store_edit', {'id': store.id}) }}" class="btn btn-primary"><i class="fas fa-pen"></i> {{ "Edit"|trans }}</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="6">no records found</td>
+                <td colspan="6">{{ "no records found"|trans }}</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_admin_store_new') }}" class="btn btn-primary"><i class="fas fa-plus"></i> Create new</a>
+    <a href="{{ path('app_admin_store_new') }}" class="btn btn-primary"><i class="fas fa-plus"></i> {{ "Create new"|trans }}</a>
 {% endblock %}

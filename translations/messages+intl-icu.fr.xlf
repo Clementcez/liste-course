@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="F1B9z4R" resname="Email:">
+        <source>Email:</source>
+        <target>Mél:</target>
+      </trans-unit>
+      <trans-unit id="Vpskgqa" resname="Password:">
+        <source>Password:</source>
+        <target>Mot de passe:</target>
+      </trans-unit>
+      <trans-unit id="QoghNQ6" resname="login">
+        <source>login</source>
+        <target>connexion</target>
+      </trans-unit>
+      <trans-unit id="8EEmBiD" resname="Wording">
+        <source>Wording</source>
+        <target>Libellé</target>
+      </trans-unit>
+      <trans-unit id="Um4Ah8w" resname="Description">
+        <source>Description</source>
+        <target>Description</target>
+      </trans-unit>
+      <trans-unit id="7n2pNrX" resname="Store">
+        <source>Store</source>
+        <target>Magasin</target>
+      </trans-unit>
+      <trans-unit id="giurjUG" resname="Quantity">
+        <source>Quantity</source>
+        <target>Quantité</target>
+      </trans-unit>
+      <trans-unit id="_574lBd" resname="Product">
+        <source>Product</source>
+        <target>Produit</target>
+      </trans-unit>
+      <trans-unit id="Dv2SozW" resname="Checked">
+        <source>Checked</source>
+        <target>Validé ?</target>
+      </trans-unit>
+      <trans-unit id="KSwG8AR" resname="Category">
+        <source>Category</source>
+        <target>Categorie</target>
+      </trans-unit>
+      <trans-unit id="FbYZdLJ" resname="Location">
+        <source>Location</source>
+        <target>Localisation</target>
+      </trans-unit>
+      <trans-unit id="wlM3BVR" resname="Roles">
+        <source>Roles</source>
+        <target>Droits</target>
+      </trans-unit>
+      <trans-unit id="am4NLHw" resname="New shopping list">
+        <source>New shopping list</source>
+        <target>Nouvelle liste de courses</target>
+      </trans-unit>
+      <trans-unit id="FQn1YfJ" resname="Save">
+        <source>Save</source>
+        <target>Enregistrer</target>
+      </trans-unit>
+      <trans-unit id="RjbD_vt" resname="Edit shopping list">
+        <source>Edit shopping list</source>
+        <target>Editer la liste de courses</target>
+      </trans-unit>
+      <trans-unit id="bJLMaD3" resname="Add shopping list item">
+        <source>Add shopping list item</source>
+        <target>Ajouter la liste de courses</target>
+      </trans-unit>
+      <trans-unit id="zI.Z63_" resname="Welcome!">
+        <source>Welcome!</source>
+        <target>Bienvenue!</target>
+      </trans-unit>
+      <trans-unit id="ezuwN7u" resname="User index">
+        <source>User index</source>
+        <target>Liste des utilisateurs</target>
+      </trans-unit>
+      <trans-unit id="EhVukhv" resname="Id">
+        <source>Id</source>
+        <target>Id</target>
+      </trans-unit>
+      <trans-unit id="lpzL089" resname="Email">
+        <source>Email</source>
+        <target>Mél</target>
+      </trans-unit>
+      <trans-unit id="588_9PF" resname="Password">
+        <source>Password</source>
+        <target>Mot de passe</target>
+      </trans-unit>
+      <trans-unit id="D5lam8." resname="no records found">
+        <source>no records found</source>
+        <target>Aucun enregistrement trouvé</target>
+      </trans-unit>
+      <trans-unit id="8fcV81J" resname="ShoppingList">
+        <source>ShoppingList</source>
+        <target>Liste de courses</target>
+      </trans-unit>
+      <trans-unit id="_NU_9fk" resname="CreatedAt">
+        <source>CreatedAt</source>
+        <target>Créé le</target>
+      </trans-unit>
+      <trans-unit id="IMIzC8T" resname="UpdatedAt">
+        <source>UpdatedAt</source>
+        <target>Mis à jour le</target>
+      </trans-unit>
+      <trans-unit id="qeCX8tT" resname="ShoppingListItem">
+        <source>ShoppingListItem</source>
+        <target>Objet de la liste de courses</target>
+      </trans-unit>
+      <trans-unit id="U0M9PNE" resname="back to list">
+        <source>back to list</source>
+        <target>Retour à la liste</target>
+      </trans-unit>
+      <trans-unit id="RkxP.QG" resname="Edit">
+        <source>Edit</source>
+        <target>Editer</target>
+      </trans-unit>
+      <trans-unit id="Kw3N1AA" resname="actions">
+        <source>actions</source>
+        <target>actions</target>
+      </trans-unit>
+      <trans-unit id="sZoCCHy" resname="ShoppingList index">
+        <source>ShoppingList index</source>
+        <target>Liste de liste de courses</target>
+      </trans-unit>
+      <trans-unit id="HGMzUJ3" resname="show">
+        <source>show</source>
+        <target>Voir</target>
+      </trans-unit>
+      <trans-unit id="4r2WnOL" resname="Edit ShoppingList">
+        <source>Edit ShoppingList</source>
+        <target>Modifier la liste de courses</target>
+      </trans-unit>
+      <trans-unit id="4tClSWj" resname="Delete">
+        <source>Delete</source>
+        <target>Supprimer</target>
+      </trans-unit>
+      <trans-unit id="9jPfr7S" resname="Edit ShoppingListItem">
+        <source>Edit ShoppingListItem</source>
+        <target>Modifier objet liste de courses</target>
+      </trans-unit>
+      <trans-unit id="vAhOVaj" resname="New Store">
+        <source>New Store</source>
+        <target>Nouveau magasin</target>
+      </trans-unit>
+      <trans-unit id="i2nV5C0" resname="Create new Store">
+        <source>Create new Store</source>
+        <target>Créer un nouveau magasin</target>
+      </trans-unit>
+      <trans-unit id="JiEhxTc" resname="edit">
+        <source>edit</source>
+        <target>Editer</target>
+      </trans-unit>
+      <trans-unit id="jVfGUGZ" resname="Store index">
+        <source>Store index</source>
+        <target>Liste des magasins</target>
+      </trans-unit>
+      <trans-unit id="nz33U6Q" resname="Create new">
+        <source>Create new</source>
+        <target>Ajouter un</target>
+      </trans-unit>
+      <trans-unit id="iJZ2I8P" resname="Edit Store">
+        <source>Edit Store</source>
+        <target>Editer un magasin</target>
+      </trans-unit>
+      <trans-unit id="eV7.2Hy" resname="New Product">
+        <source>New Product</source>
+        <target>Nouveau produit</target>
+      </trans-unit>
+      <trans-unit id="xGLeTFY" resname="Create new Product">
+        <source>Create new Product</source>
+        <target>Ajouter un produit</target>
+      </trans-unit>
+      <trans-unit id="9ZheX9T" resname="Product index">
+        <source>Product index</source>
+        <target>Liste des produits</target>
+      </trans-unit>
+      <trans-unit id="yq9oQvd" resname="Edit Product">
+        <source>Edit Product</source>
+        <target>Modifier un produit</target>
+      </trans-unit>
+      <trans-unit id="Ogh45Pp" resname="New Category">
+        <source>New Category</source>
+        <target>Nouvelle catégorie</target>
+      </trans-unit>
+      <trans-unit id="W6joEsF" resname="Create new Category">
+        <source>Create new Category</source>
+        <target>Ajouter un catégorie</target>
+      </trans-unit>
+      <trans-unit id="xo05DSt" resname="Category index">
+        <source>Category index</source>
+        <target>Liste des catégories</target>
+      </trans-unit>
+      <trans-unit id="DZO3ehf" resname="Edit Category">
+        <source>Edit Category</source>
+        <target>Modifier catégorie</target>
+      </trans-unit>
+      <trans-unit id="wcEAnT8" resname="Update">
+        <source>Update</source>
+        <target>Mettre à jour</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

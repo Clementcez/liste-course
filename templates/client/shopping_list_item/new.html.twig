@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Add shopping list item{% endblock %}
+{% block title %}{{ "Add shopping list item"|trans }}{% endblock %}
 
 {% block body %}
     <div class="d-flex justify-content-between my-5">
@@ -10,7 +10,7 @@
 
     {{ form_start(form) }}
         {{ form_widget(form) }}
-        <button class="btn btn-success"><i class="fas fa-pen"></i> Save</button>
+        <button class="btn btn-success"><i class="fas fa-pen"></i> {{ "Save"|trans }}</button>
     {{ form_end(form) }}
 
 {% endblock %}

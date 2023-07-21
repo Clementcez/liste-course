@@ -1,20 +1,20 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}ShoppingList index{% endblock %}
+{% block title %}{{ "ShoppingList index"|trans }}{% endblock %}
 
 {% block body %}
-    <h1>ShoppingList index</h1>
+    <h1>{{ "ShoppingList index"|trans }}</h1>
 
     <table id="shoppingList_list" class="table table-striped">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Wording</th>
-                <th>Store</th>
-                <th>Description</th>
-                <th>CreatedAt</th>
-                <th>UpdatedAt</th>
-                <th>actions</th>
+                <th>{{ "Id"|trans }}</th>
+                <th>{{ "Wording"|trans }}</th>
+                <th>{{ "Store"|trans }}</th>
+                <th>{{ "Description"|trans }}</th>
+                <th>{{ "CreatedAt"|trans }}</th>
+                <th>{{ "UpdatedAt"|trans }}</th>
+                <th>{{ "actions"|trans }}</th>
             </tr>
         </thead>
         <tbody>
@@ -27,13 +27,13 @@
                 <td>{{ shopping_list.createdAt ? shopping_list.createdAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ shopping_list.updatedAt ? shopping_list.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
-                    <a href="{{ path('app_admin_shopping_list_shopping_list_show', {'id': shopping_list.id}) }}" class="btn btn-info"><i class="fas fa-eye"></i> show</a>
-                    <a href="{{ path('app_admin_shopping_list_shopping_list_edit', {'id': shopping_list.id}) }}" class="btn btn-primary"><i class="fas fa-pen"></i> Edit</a>
+                    <a href="{{ path('app_admin_shopping_list_shopping_list_show', {'id': shopping_list.id}) }}" class="btn btn-info"><i class="fas fa-eye"></i> {{ "show"|trans }}</a>
+                    <a href="{{ path('app_admin_shopping_list_shopping_list_edit', {'id': shopping_list.id}) }}" class="btn btn-primary"><i class="fas fa-pen"></i> {{ "Edit"|trans }}</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="6">no records found</td>
+                <td colspan="6">{{ "no records found"|trans }}</td>
             </tr>
         {% endfor %}
         </tbody>
